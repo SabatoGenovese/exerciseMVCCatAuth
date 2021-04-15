@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="exerciseCatAuth:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>exerciseCatAuth</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="exerciseCatAuth-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="exerciseCatAuth:war exploded" />
+    </root>
+  </artifact>
+</component>
