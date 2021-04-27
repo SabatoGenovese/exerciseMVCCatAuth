@@ -26,6 +26,14 @@
          th {
              font-size: large;
          }
+
+         fieldset {
+             margin-top: 50px;
+         }
+
+         option, select {
+             font-size: medium;
+         }
       </style>
    </head>
    <body>
@@ -60,21 +68,25 @@
 
       <fieldset>
          <legend>Categorie Disponibili</legend>
-         <select name="categoria">
-            <% obj = request.getServletContext().getAttribute("categorie");
-               if((obj != null) && (obj instanceof List))
-               {
-                  List<Categoria> categorie = (List<Categoria>) obj;
-
-                  for(Categoria c : categorie)
+         <form method="post" action="CategoriaServlet">
+            <select name="categoria" >
+               <% obj = request.getServletContext().getAttribute("categorie");
+                  if((obj != null) && (obj instanceof List))
                   {
-            %>
-            <option value=<%=c.getId()%>><%=c.getNome()%></option>
-            <%
+                     List<Categoria> categorie = (List<Categoria>) obj;
+
+                     for(Categoria c : categorie)
+                     {
+               %>
+               <option value=<%=c.getId()%>><%=c.getNome()%></option>
+               <%
+                     }
                   }
-               }
-            %>
-         </select>
+               %>
+            </select>
+
+            <input type="submit" name="categoriaScelta" value="Filtra Prodotti">
+         </form>
       </fieldset>
    </body>
 </html>
