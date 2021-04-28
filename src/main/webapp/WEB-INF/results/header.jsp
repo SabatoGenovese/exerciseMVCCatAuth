@@ -14,7 +14,6 @@
             <li id="utente">Ciao ${utente.nome}</li>
           </c:otherwise>
         </c:choose>
-
       </ul>
 </body>
 </html>

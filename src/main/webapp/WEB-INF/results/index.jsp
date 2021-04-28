@@ -9,8 +9,7 @@
       <link rel="stylesheet" href="./css/stile.css" type="text/css">
    </head>
    <body>
-      <jsp:include page="header.jsp"></jsp:include>
-
+      <%@ include file="header.jsp" %>
       <h1> Inventario Prodotti</h1>
 
       <table>
@@ -63,5 +62,7 @@
             <input type="submit" name="categoriaScelta" value="Filtra Prodotti" formtarget="_blank">
          </form>
       </fieldset>
+
+      <%@ include file="footer.jsp" %>
    </body>
 </html>
