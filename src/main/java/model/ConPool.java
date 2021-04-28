@@ -33,6 +33,9 @@ public class ConPool
    public static void deleteConnection()
    {
       if(datasource != null)
+      {
          datasource.close(true);
+         datasource = null;
+      }
    }
 }
