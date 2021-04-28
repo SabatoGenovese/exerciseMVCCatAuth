@@ -6,38 +6,13 @@
    <head>
       <title>Inventario Prodotti</title>
 
-      <style>
-         h1 {
-             text-align: center;
-         }
-
-         select {
-             width: 200px;
-             height: 50px;
-         }
-
-         table, th, tr, td {
-             text-align: center;
-             border: 2px solid blue;
-             font-family: "Arial";
-             font-size: medium;
-         }
-
-         th {
-             font-size: large;
-         }
-
-         fieldset {
-             margin-top: 50px;
-         }
-
-         option, select {
-             font-size: medium;
-         }
-      </style>
+      <link rel="stylesheet" href="./css/stile.css" type="text/css">
    </head>
    <body>
+      <jsp:include page="header.jsp"></jsp:include>
+
       <h1> Inventario Prodotti</h1>
+
       <table>
          <tr>
             <th>ID</th>
@@ -85,7 +60,7 @@
                %>
             </select>
 
-            <input type="submit" name="categoriaScelta" value="Filtra Prodotti">
+            <input type="submit" name="categoriaScelta" value="Filtra Prodotti" formtarget="_blank">
          </form>
       </fieldset>
    </body>

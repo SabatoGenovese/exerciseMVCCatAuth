@@ -33,4 +33,30 @@ public class CategoriaDAO
          throw new RuntimeException(e);
       }
    }
+
+   public static Categoria doRetrieveById(int id)
+   {
+      try(Connection con = ConPool.getConnection())
+      {
+         PreparedStatement ps = con.prepareStatement("SELECT ID, nome, descrizione FROM categoria WHERE ID = ?");
+         ps.setInt(1, id);
+         ResultSet rs = ps.executeQuery();
+
+         if(rs.next())
+         {
+            Categoria categoria = new Categoria();
+            categoria.setId(rs.getInt("ID"));
+            categoria.setNome(rs.getString("nome"));
+            categoria.setDescrizione(rs.getString("descrizione"));
+
+            return categoria;
+         }
+
+         return null;
+      }
+      catch (SQLException e)
+      {
+         throw new RuntimeException(e);
+      }
+   }
 }

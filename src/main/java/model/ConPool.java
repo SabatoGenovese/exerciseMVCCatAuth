@@ -34,7 +34,7 @@ public class ConPool
    {
       if(datasource != null)
       {
-         datasource.close(true);
+         datasource.close();
          datasource = null;
       }
    }
