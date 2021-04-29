@@ -15,10 +15,11 @@
 
       <fieldset>
          <legend>Registrazione</legend>
-         <form method="post" action="RegistrazioneServlet">
-            <input type="text" placeholder="Username" name="username" required>
-            <input type="password" placeholder="Password" name="password" required>
-            <input type="email" placeholder="Email" name="email" required>
+         <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="email" placeholder="Email" required>
             <label>Amministratore</label>
             <label for="admin">Si</label>
             <input type="radio" id="admin" name="admin">

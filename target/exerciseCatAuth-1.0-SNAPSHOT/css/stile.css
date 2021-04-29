@@ -1,0 +1,62 @@
+h1 {
+    text-align: center;
+    margin: 50px;
+}
+
+select {
+    width: 200px;
+    height: 50px;
+}
+
+table, th, tr, td {
+    text-align: center;
+    border: 2px solid blue;
+    font-family: "Arial";
+    font-size: medium;
+    margin-top: 30px;
+}
+
+th {
+    font-size: large;
+}
+
+fieldset {
+    margin-top: 50px;
+}
+
+option, select {
+    font-size: medium;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gainsboro;
+    position: sticky;
+    top: 0;
+    font-size: x-large;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#utente {
+    float: left;
+    padding: 14px 16px;
+    background-color: cornflowerblue;
+}
+
+li a:hover {
+    background-color: rgba(105, 232, 8, 0.34);
+}
