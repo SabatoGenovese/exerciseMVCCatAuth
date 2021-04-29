@@ -15,16 +15,15 @@
 
       <fieldset>
          <legend>Registrazione</legend>
-         <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <input type="email" placeholder="Email" required>
-            <label>Amministratore</label>
+         <form method="post" action="RegistrazioneServlet">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <label style="font-style: italic">Amministratore</label>
             <label for="admin">Si</label>
-            <input type="radio" id="admin" name="admin">
+            <input type="radio" id="admin" name="admin" value="1">
             <label for="notAdmin">No</label>
-            <input type="radio" id="notAdmin" name="admin">
+            <input type="radio" id="notAdmin" name="admin" value="0">
             <input type="submit" value="Registrati">
          </form>
       </fieldset>

@@ -38,8 +38,24 @@ public class UtenteDAO
       }
    }
 
-   public static void doSave(Utente utente)
+   public static int doSave(Utente utente)
    {
+      if(utente != null)
+         try(Connection con = ConPool.getConnection())
+         {
+            PreparedStatement ps = con.prepareStatement("INSERT INTO utente (username, passwordhash, email, admin) VALUES (?, ?, ?, ?)");
+            ps.setString(1, utente.getUsername());
+            ps.setString(2, utente.getPasswordHash());
+            ps.setString(3, utente.getEmail());
+            ps.setBoolean(4, utente.isAdmin());
 
+            return ps.executeUpdate();
+         }
+         catch (SQLException e)
+         {
+            throw new RuntimeException(e);
+         }
+
+      return 0;
    }
 }

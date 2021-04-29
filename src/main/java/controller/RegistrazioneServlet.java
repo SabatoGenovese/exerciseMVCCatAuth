@@ -19,7 +19,7 @@ public class RegistrazioneServlet extends HttpServlet
       String username = request.getParameter("username");
       String password = request.getParameter("password");
       String email = request.getParameter("email");
-      boolean admin = Boolean.parseBoolean(request.getParameter("admin"));
+      boolean admin = request.getParameter("admin").equalsIgnoreCase("1");
 
       if(username != null && password != null && email != null)
       {
@@ -28,10 +28,12 @@ public class RegistrazioneServlet extends HttpServlet
          utente.setPassword(password);
          utente.setEmail(email);
          utente.setAdmin(admin);
-         UtenteDAO.doSave(utente);
 
-         request.getSession().invalidate();
-         request.getSession(true).setAttribute("utente", utente);
+         if(UtenteDAO.doSave(utente) == 1)
+         {
+            request.getSession().invalidate();
+            request.getSession(true).setAttribute("utente", utente);
+         }
       }
 
       response.sendRedirect(request.getServletContext().getContextPath() + "/index.html");

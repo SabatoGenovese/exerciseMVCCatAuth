@@ -19,11 +19,11 @@
             <input type="text" placeholder="Username" name="username" required>
             <input type="password" placeholder="Password" name="password" required>
             <input type="email" placeholder="Email" name="email" required>
-            <label>Amministratore</label>
+            <label style="font-style: italic">Amministratore</label>
             <label for="admin">Si</label>
-            <input type="radio" id="admin" name="admin">
+            <input type="radio" id="admin" name="admin" value="1">
             <label for="notAdmin">No</label>
-            <input type="radio" id="notAdmin" name="admin">
+            <input type="radio" id="notAdmin" name="admin" value="0">
             <input type="submit" value="Registrati">
          </form>
       </fieldset>
